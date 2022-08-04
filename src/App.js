@@ -6,7 +6,9 @@ import { SignIn } from "components/sign-in";
 import { SignOut } from "components/sign-out";
 
 function App() {
-  const user = useAuthState(auth);
+  const [user] = useAuthState(auth);
+
+  console.log(user);
 
   return (
     <div className="App">
