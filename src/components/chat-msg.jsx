@@ -1,7 +1,7 @@
 import { auth } from "services/firebase";
 
 function ChatMessage(props) {
-  const { text, uid } = props.message;
+  const { text, uid, photoURL } = props.message;
 
   const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
 
@@ -9,6 +9,7 @@ function ChatMessage(props) {
     <>
       <div className={`message ${messageClass}`}>
         <p>{text}</p>
+        <img alt="profile" src={photoURL} />
       </div>
     </>
   );

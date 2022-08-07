@@ -11,7 +11,7 @@ import { ChatRoom } from "components/chat-room";
 function App() {
   const [user] = useAuthState(auth);
 
-  console.log(user);
+  console.log('USER: ', user);
 
   return (
     <div className="App">
