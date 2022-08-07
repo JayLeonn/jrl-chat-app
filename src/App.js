@@ -1,9 +1,12 @@
 import React from "react";
 import "./App.css";
-import { useAuthState } from "react-firebase-hooks/auth";
+
 import { auth } from "services/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 import { SignIn } from "components/sign-in";
 import { SignOut } from "components/sign-out";
+import { ChatRoom } from "components/chat-room";
 
 function App() {
   const [user] = useAuthState(auth);
@@ -21,17 +24,5 @@ function App() {
     </div>
   );
 }
-
-function ChatRoom() {
-  return (
-    <div>SUCCESS!</div>
-  )
-}
-
-/* function ChatMessage() {
-  return (
-    <div>MSG!</div>
-  )
-} */
 
 export default App;
