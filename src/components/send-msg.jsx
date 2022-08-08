@@ -20,8 +20,9 @@ function SendMessage() {
   return (
     <form onSubmit={sendMessage}>
       <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="send a message" />
+      {formValue.length > 255 && <div>Too long message for this rocket</div>}
+      <button type="submit" disabled={!formValue || formValue.length > 255}>🚀</button>
 
-      <button type="submit" disabled={!formValue}>🚀 SEND 🚀</button>
     </form>)
 }
 
