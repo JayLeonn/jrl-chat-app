@@ -8,6 +8,8 @@ function ChatRoom() {
   const [messages] = useCollectionData(queryMessagesCollection);
   const placeholder = useRef();
 
+  console.log("MESSAGES:", messages);
+
   useEffect(() => {
     placeholder.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages])
@@ -15,7 +17,7 @@ function ChatRoom() {
   return (
     <>
       <main>
-        {messages && messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
+        {messages && messages.reverse().map((msg) => <ChatMessage key={msg.id} message={msg} />)}
 
         <span ref={placeholder}></span>
       </main>
