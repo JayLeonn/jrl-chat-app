@@ -1,32 +1,38 @@
-const functions = require("firebase-functions");
-const Filter = require("bad-words");
-const admin = require("firebase-admin");
+//https://firebase.google.com/docs/functions/get-started
+const functions = require('firebase-functions');
+const Filter = require('bad-words');
+const admin = require('firebase-admin');
 admin.initializeApp();
 
 const db = admin.firestore();
 
-exports.detectOnCreateWithBadWords = functions.firestore
+const filteredWords = ['asd'];
+
+exports.detectFilteredWords = functions.firestore
   .document("messages/{msgId}")
   .onCreate(async (doc) => {
-    const filter = new Filter();
+    const filter = new Filter({ emptyList: true });
+    filter.addWords(...filteredWords);
     const { text, uid } = doc.data();
 
     if (filter.isProfane(text)) {
       const cleaned = filter.clean(text);
       await doc.ref.update({
-        text: `I've been BANNED 🤐 for saying: ${cleaned}`,
+        text: `🚫 BANNED 🚫 for saying: ${cleaned}`,
       });
 
       await db.collection("banned").doc(uid).set({});
     }
+  });
 
-    const userRef = db.collection("users").doc(uid);
+exports.detectRocket = functions.firestore
+  .document("messages/{msgId}")
+  .onCreate(async (doc) => {
+    const { text } = doc.data();
 
-    const userData = (await userRef.get()).data();
-
-    if (userData.msgCount >= 7) {
-      await db.collection("banned").doc(uid).set({});
-    } else {
-      await userRef.set({ msgCount: (userData.msgCount || 0) + 1 });
+    if (text === '🚀') {
+      await doc.ref.update({
+        text: `🚀 TO THE MOON!!!`,
+      });
     }
   });

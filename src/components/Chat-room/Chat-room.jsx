@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { queryMessagesCollection } from "services/firebase";
-import { ChatMessage } from "./chat-msg";
-import { SendMessage } from "./send-msg";
+import { ChatMessage } from "components/Chat-msg/Chat-msg";
+import { SendMessage } from "components/Send-msg/Send-msg";
+import styles from "./Chat-room.module.css";
+
 
 function ChatRoom() {
   const [messages] = useCollectionData(queryMessagesCollection);
@@ -12,7 +14,7 @@ function ChatRoom() {
 
   useEffect(() => {
     placeholder.current.scrollIntoView({ behavior: 'smooth' });
-  }, [messages])
+  }, [messages]);
 
   return (
     <>

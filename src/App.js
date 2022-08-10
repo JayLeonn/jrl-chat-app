@@ -4,9 +4,9 @@ import "./App.css";
 import { auth } from "services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import { SignIn } from "components/sign-in";
-import { SignOut } from "components/sign-out";
-import { ChatRoom } from "components/chat-room";
+import { SignIn } from "components/Sign-in/Sign-in";
+import { SignOut } from "components/Sign-out/Sign-out";
+import { ChatRoom } from "components/Chat-room/Chat-room";
 
 function App() {
   const [user] = useAuthState(auth);

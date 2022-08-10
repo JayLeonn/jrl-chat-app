@@ -1,0 +1,12 @@
+.message {
+  background-color: lightgray;
+  margin: 10px 0;
+}
+
+.sent {
+  border: 10px solid black;
+}
+
+.received {
+  border: 10px solid red;
+}
