@@ -10,7 +10,7 @@
   --border-color: rgba(255, 255, 255, 0.25);
   --default-border: 1px solid var(--border-color);
 
-  --app-width-desktop: 60vw;
+  --app-width: 60vw;
   --header-height: 10vh;
   --form-height: 8vh;
 }

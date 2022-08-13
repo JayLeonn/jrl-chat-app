@@ -12,11 +12,17 @@ body {
 }
 
 .app-container {
-  max-width: 60vw;
+  width: var(--app-width);
   height: 100vh;
   margin: 0 auto;
 }
 
 .section {
   height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --app-width: 100vw;
+  }
 }

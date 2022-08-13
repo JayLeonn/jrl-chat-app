@@ -2,7 +2,7 @@
   height: var(--form-height);
   position: fixed;
   bottom: 0;
-  width: 60vw;
+  width: var(--app-width);
   font-size: 1.5rem;
   padding: 0 15px 15px;
   background-color: var(--background-color);
@@ -16,11 +16,12 @@
 
 .sendButton {
   position: absolute;
-  right: 50px;
+  right: 25px;
   top: 50%;
   transform: translateY(calc(-50% - 10px));
   font-size: 2rem;
   border: none;
+  background-color: transparent
 }
 
 .sendButton:hover {
