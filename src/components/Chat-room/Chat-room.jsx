@@ -8,20 +8,20 @@ import styles from "./Chat-room.module.css";
 
 function ChatRoom() {
   const [messages] = useCollectionData(queryMessagesCollection);
-  const placeholder = useRef();
+  const scrollTarget = useRef();
 
   console.log("MESSAGES:", messages);
 
   useEffect(() => {
-    placeholder.current.scrollIntoView({ behavior: 'smooth' });
+    scrollTarget.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   return (
     <>
-      <main>
+      <main className={styles.main}>
         {messages && messages.reverse().map((msg) => <ChatMessage key={msg.id} message={msg} />)}
 
-        <span ref={placeholder}></span>
+        <span ref={scrollTarget}></span>
       </main>
       <SendMessage />
     </>

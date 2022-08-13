@@ -10,15 +10,18 @@ function ChatMessage(props) {
    * Firestore returns server timestamp as seconds instead of ms
    */
   const hours = new Date(createdAt?.seconds * 1000).getHours();
-  const minutes = new Date(createdAt?.seconds * 1000).getMinutes();
+  const minutes = ('0' + new Date(createdAt?.seconds * 1000).getMinutes()).slice(-2); // ensure leading zero in minutes
 
   return (
     <>
-      <div className={`${messageClass} ${styles.message}`}>
-        <p>{displayName}</p>
-        <p>{createdAt ? `${hours}:${minutes}` : "Sending..."}</p>
-        <p>{text}</p>
-        <img alt="profile" src={photoURL} />
+      <div className={`${messageClass} ${styles.message} flex-horizontal`}>
+        <div className={`${styles.messageDetails} flex-horizontal`}>
+          <div className={styles.displayName}>{uid === auth.currentUser.uid ? 'You' : displayName},</div>
+          <div className={styles.timestamp}>{createdAt ? `${hours}:${minutes}` : "Sending..."}</div>
+        </div>
+
+        <p className={styles.messageContent}>{text}</p>
+        <img className={styles.img} alt="profile" src={photoURL} />
       </div>
     </>
   );

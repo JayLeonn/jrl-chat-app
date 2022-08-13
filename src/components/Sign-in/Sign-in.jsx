@@ -3,7 +3,7 @@ import styles from "./Sign-in.module.css";
 
 
 function SignIn() {
-  return <button onClick={signInWithGoogle}>Sign in with Google</button>;
+  return <button className={`${styles.signIn}`} onClick={signInWithGoogle}>Sign in with Google</button>;
 }
 
 export { SignIn };

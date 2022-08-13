@@ -1,0 +1,47 @@
+.form {
+  height: var(--form-height);
+  position: fixed;
+  bottom: 0;
+  width: 60vw;
+  font-size: 1.5rem;
+  padding: 0 15px 15px;
+  background-color: var(--background-color);
+  border-right: var(--default-border);
+  border-left: var(--default-border);
+}
+
+.form * {
+  background-color: var(--input-color);
+}
+
+.sendButton {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(calc(-50% - 10px));
+  font-size: 2rem;
+  border: none;
+}
+
+.sendButton:hover {
+  cursor: pointer;
+}
+
+
+.sendButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sendMessage {
+  width: 100%;
+  outline: none;
+  border: var(--default-border);
+  padding: 0 10px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+.sendMessage:focus {
+  border: 1px solid var(--primary-color);
+}

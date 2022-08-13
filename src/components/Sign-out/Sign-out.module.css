@@ -1,0 +1,13 @@
+.signOutButton {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  font-weight: 600;
+}

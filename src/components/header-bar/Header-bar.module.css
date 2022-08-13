@@ -1,0 +1,10 @@
+.header {
+  position: fixed;
+  top: 0;
+  height: var(--header-height);
+  color: var(--primary-text-color);
+  width: var(--app-width-desktop);
+  padding: 15px 25px;
+  border: var(--default-border);
+  border-top: none;
+}

@@ -1,0 +1,16 @@
+:root {
+
+  --primary-color: #e040fb;
+  --background-color: #12181F;
+  --input-color: rgb(38, 43, 47);
+
+  --primary-text-color: rgb(255, 255, 255);
+  --secondary-text-color: rgba(255, 255, 255, 0.25);
+
+  --border-color: rgba(255, 255, 255, 0.25);
+  --default-border: 1px solid var(--border-color);
+
+  --app-width-desktop: 60vw;
+  --header-height: 10vh;
+  --form-height: 8vh;
+}

@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.css";
 
 import { auth } from "services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { SignIn } from "components/Sign-in/Sign-in";
-import { SignOut } from "components/Sign-out/Sign-out";
 import { ChatRoom } from "components/Chat-room/Chat-room";
+import { HeaderBar } from "components/Header-bar/Header-bar";
 
 function App() {
   const [user] = useAuthState(auth);
@@ -14,13 +14,10 @@ function App() {
   console.log('USER: ', user);
 
   return (
-    <div className="App">
-      <header>
-        <h1>🔥 gh-pages + google sign-in 🔥</h1>
-        <SignOut />
-      </header>
+    <div className="app-container">
+      <HeaderBar />
 
-      <section>{user ? <ChatRoom /> : <SignIn />}</section>
+      <section className="flex-vertical justify-center section">{user ? <ChatRoom /> : <SignIn />}</section>
     </div>
   );
 }

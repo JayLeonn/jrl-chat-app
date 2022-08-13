@@ -1,0 +1,21 @@
+.main {
+  padding: 10px;
+  height: calc(100vh - var(--header-height) - var(--form-height));
+  margin: var(--header-height) 0 var(--form-height);
+  overflow-y: scroll;
+  border-right: var(--default-border);
+  border-left: var(--default-border);
+}
+
+/* Custom scrollbar */
+.main::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.main::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: white;
+}
