@@ -1,5 +1,6 @@
 .form {
   height: var(--form-height);
+  min-height: 65px;
   position: fixed;
   bottom: 0;
   width: var(--app-width);
