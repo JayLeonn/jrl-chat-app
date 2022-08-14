@@ -17,7 +17,7 @@ function App() {
     <div className="app-container">
       <HeaderBar />
 
-      <section className="flex-vertical justify-center section">{user ? <ChatRoom /> : <SignIn />}</section>
+      <section className="flex-vertical section">{user ? <ChatRoom /> : <SignIn />}</section>
     </div>
   );
 }

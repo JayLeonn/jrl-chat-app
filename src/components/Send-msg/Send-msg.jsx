@@ -16,7 +16,7 @@ function SendMessage() {
 
   return (
     <form onSubmit={sendMessage} className={`${styles.form} flex-horizontal`}>
-      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type Something..." className={styles.sendMessage} />
+      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type something..." className={styles.sendMessage} />
       <button type="submit" disabled={!formValue || formValue.length > 255} className={styles.sendButton}>🚀</button>
 
     </form>);

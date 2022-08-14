@@ -18,7 +18,7 @@ exports.detectFilteredWords = functions.firestore
     if (filter.isProfane(text)) {
       const cleaned = filter.clean(text);
       await doc.ref.update({
-        text: `🚫 BANNED 🚫 for saying: ${cleaned}`,
+        text: `🚫 BANNED for saying: ${cleaned}`,
       });
 
       await db.collection("banned").doc(uid).set({});

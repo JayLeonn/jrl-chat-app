@@ -20,8 +20,8 @@ function ChatMessage(props) {
           <div className={styles.timestamp}>{createdAt ? `${hours}:${minutes}` : "Sending..."}</div>
         </div>
 
-        <p className={styles.messageContent}>{text}</p>
         <img className={styles.img} alt="profile" src={photoURL} />
+        <p className={styles.messageContent}>{text}</p>
       </div>
     </>
   );

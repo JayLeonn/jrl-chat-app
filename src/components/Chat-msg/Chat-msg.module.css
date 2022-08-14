@@ -2,6 +2,12 @@
   position: relative;
 }
 
+.img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .messageContent {
   max-width: 450px;
   line-height: 1.5rem;
@@ -9,7 +15,12 @@
   border-radius: 25px;
   position: relative;
   text-align: left;
-  margin: 20px 0;
+  margin: 25px 0 15px 0;
+  background-color: var(--primary-color);
+}
+
+.messageDetails * {
+  padding: 0 5px;
 }
 
 .sent {
@@ -17,7 +28,7 @@
 }
 
 .sent .messageContent {
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   align-self: flex-end;
   border-top-right-radius: 1px;
 }
@@ -27,21 +38,28 @@
   border-top-left-radius: 1px;
 }
 
-.img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 20px 5px;
-}
-
-.messageDetails {
+.sent .messageDetails {
   position: absolute;
   color: var(--secondary-text-color);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
+  right: 50px;
 }
 
-.messageDetails * {
-  padding: 0 5px;
+.received .messageDetails {
+  position: absolute;
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+  left: 50px;
+}
+
+.sent .img {
+  margin: 0 0 0 10px;
+}
+
+
+.received .img {
+  margin: 0 10px 0 0;
+
 }
 
 .timestamp {

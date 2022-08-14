@@ -8,21 +8,41 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: black;
 }
 
 .app-container {
-  width: var(--app-width);
-  height: 100vh;
+  width: calc(var(--app-width) + 2px);
+  background-color: var(--background-color);
   margin: 0 auto;
+  border-right: var(--default-border);
+  border-left: var(--default-border);
 }
 
 .section {
-  height: 100%;
+  padding-top: var(--header-height);
+  padding-bottom: var(--form-height);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
 }
 
 @media only screen and (max-width: 800px) {
   :root {
     --app-width: 100vw;
+  }
+
+  .app-container {
+    border: none;
   }
 }
