@@ -6,7 +6,7 @@ admin.initializeApp();
 
 const db = admin.firestore();
 
-const filteredWords = ['asd'];
+const filteredWords = ['turku'];
 
 exports.detectFilteredWords = functions.firestore
   .document("messages/{msgId}")

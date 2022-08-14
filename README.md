@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# [JRL Chat](https://joonasleonsaari.io/jrl-chat-app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts:
 
 In the project directory, you can run:
 
@@ -39,32 +39,28 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Custom scripts
+
+### `npm run deploy`
+
+Deploys the app from `git checkout gh-pages` branch to github-pages using [gh-pages](https://www.npmjs.com/package/gh-pages)
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Functions
 
-### Analyzing the Bundle Size
+The repository includes a `/functions` nodejs project which utilizes a [serverless Firebase Cloud Functions framework](https://firebase.google.com/docs/functions)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Available scripts:
 
-### Making a Progressive Web App
+### `npm run deploy`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**NOTE:**  Requires you to be inside the `/functions` folder
 
-### Advanced Configuration
+Deploys the functions defined in `/functions/index.js` as firebase cloud functions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

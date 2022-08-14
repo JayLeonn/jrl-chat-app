@@ -23,7 +23,7 @@ const signInWithGoogle = async () => {
   try {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
-    await signInWithPopup(auth, provider);
+    await signInWithPopup(auth, provider); //Verify credentials at Firebase side
   } catch (error) {
     console.error(error);
   }
