@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <div className="star">{/* There be stars in them there wars */}</div>
       <HeaderBar />
 
       <section className="flex-vertical section">{user ? <ChatRoom /> : <SignIn />}</section>
