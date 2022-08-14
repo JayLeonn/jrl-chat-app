@@ -9,9 +9,9 @@ function SendMessage() {
   const sendMessage = async (e) => {
     //By default, submitting a form refreshes page
     e.preventDefault();
+    setFormValue('');
 
     await addMessage(formValue, auth.currentUser);
-    setFormValue('');
   };
 
   return (
