@@ -1,9 +1,9 @@
 :root {
 
   --primary-color: rgb(224, 64, 251);
+  --accent-color: rgb(66, 133, 244);
   --background-color: rgb(18, 24, 31);
   --input-color: rgb(38, 43, 47);
-  --google-color: rgb(66, 133, 244);
 
   --primary-text-color: rgb(255, 255, 255);
   --secondary-text-color: rgba(255, 255, 255, 0.35);

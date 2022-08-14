@@ -53,11 +53,11 @@
 }
 
 .sendMessage:focus {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--accent-color);
   border-right: none;
 }
 
 .sendMessage:focus+.sendButton {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--accent-color);
   border-left: none;
 }

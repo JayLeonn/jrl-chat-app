@@ -20,6 +20,7 @@ body {
 }
 
 .section {
+  min-height: 100vh;
   padding-top: var(--header-height);
   padding-bottom: var(--form-height);
 }
