@@ -23,7 +23,7 @@ const signInWithGoogle = async () => {
   try {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
-    await signInWithPopup(auth, provider); //Verify credentials at Firebase side
+    await signInWithPopup(auth, provider);
   } catch (error) {
     console.error(error);
   }
@@ -44,15 +44,14 @@ const converter = {
 const messagesRef = collection(firestore, "messages").withConverter(converter);
 
 /**
- * Limit queried messages from /messages collection to 10
+ * Limit queried messages from /messages collection to 20
  */
 const queryMessagesCollection = query(messagesRef, orderBy("createdAt", "desc"), limit(20));
 
 /**
  * Add Message to /messages collection in firestore
  * @param formValue
- * @param uid
- * @param photoURL
+ * @param user
  */
 const addMessage = async (formValue, user) => {
   try {

@@ -10,8 +10,6 @@ function ChatRoom() {
   const [messages] = useCollectionData(queryMessagesCollection);
   const scrollTarget = useRef();
 
-  console.log("MESSAGES:", messages);
-
   useEffect(() => {
     scrollTarget.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);

@@ -11,8 +11,6 @@ import { HeaderBar } from "components/Header-bar/Header-bar";
 function App() {
   const [user] = useAuthState(auth);
 
-  console.log('USER: ', user);
-
   return (
     <div className="app-container">
       <div className="star">{/* There be stars in them there wars */}</div>
