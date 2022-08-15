@@ -43,7 +43,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### `npm run deploy`
 
-Deploys the app from `git checkout gh-pages` branch to github-pages using [gh-pages](https://www.npmjs.com/package/gh-pages)
+Deploys the app from `gh-pages` branch to github-pages using [gh-pages](https://www.npmjs.com/package/gh-pages)
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
