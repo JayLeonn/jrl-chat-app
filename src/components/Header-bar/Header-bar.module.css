@@ -1,0 +1,12 @@
+.header {
+  position: fixed;
+  top: 0;
+  height: var(--header-height);
+  min-height: 70px;
+  color: var(--primary-text-color);
+  width: var(--app-width);
+  padding: 15px 25px;
+  border-bottom: var(--default-border);
+  z-index: 99;
+  background-color: var(--background-color);
+}
