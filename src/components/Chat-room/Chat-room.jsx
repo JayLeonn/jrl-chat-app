@@ -7,7 +7,7 @@ import styles from "./Chat-room.module.css";
 
 
 function ChatRoom() {
-  const [messages] = useCollectionData(queryMessagesCollection);
+  const [messages] = useCollectionData(queryMessagesCollection); // Uses Firebase onSnapshot() that updates messages any time documents are added/deleted in the collection
   const scrollTarget = useRef();
 
   useEffect(() => {

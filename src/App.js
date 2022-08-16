@@ -9,7 +9,7 @@ import { ChatRoom } from "components/Chat-room/Chat-room";
 import { HeaderBar } from "components/Header-bar/Header-bar";
 
 function App() {
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth); // Uses Firebase onAuthStateChanged() that verifies user by checking token stored in indexedDB
 
   return (
     <div className="app-container">

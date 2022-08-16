@@ -17,13 +17,15 @@ const auth = getAuth();
 const firestore = getFirestore(app);
 
 /**
- * Google sign-in method
+ * Sign in by using Firebase Authentication (using Google Sign-in provider)
  */
 const signInWithGoogle = async () => {
   try {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
-    await signInWithPopup(auth, provider);
+    await signInWithPopup(auth, provider)/* .then((result) => {
+      console.log(result.user);
+    }) */;
   } catch (error) {
     console.error(error);
   }
